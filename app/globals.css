@@ -15,6 +15,16 @@
   --gold: #e0a82e;
 }
 
+[data-theme="light"] {
+  --sidebar: #1e3a5f;
+  --sidebar-deep: #162d4a;
+  --canvas: #f1f5f9;
+  --card: #ffffff;
+  --card-border: #e2e8f0;
+  --text: #0f172a;
+  --text-dim: #64748b;
+}
+
 @theme inline {
   --color-sidebar: var(--sidebar);
   --color-canvas: var(--canvas);
@@ -32,7 +42,7 @@ html, body {
 }
 
 ::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-thumb { background: #24395a; border-radius: 6px; }
+::-webkit-scrollbar-thumb { background: var(--card-border); border-radius: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -51,3 +61,4 @@ html, body {
 }
 .input:focus { border-color: var(--bina-blue); }
 .input::-webkit-calendar-picker-indicator { filter: invert(0.7); }
+[data-theme="light"] .input::-webkit-calendar-picker-indicator { filter: none; }

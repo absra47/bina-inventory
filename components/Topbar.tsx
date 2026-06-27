@@ -1,4 +1,5 @@
 import { Icon } from "./Icon";
+import { ThemeToggle } from "./ThemeToggle";
 import { logout } from "@/app/actions";
 
 export function Topbar({ userName }: { userName: string }) {
@@ -11,6 +12,7 @@ export function Topbar({ userName }: { userName: string }) {
         <span className="font-semibold">Bina Software</span>
       </div>
       <div className="flex items-center gap-5">
+        <ThemeToggle />
         <button className="opacity-90 hover:opacity-100" aria-label="Notifications">
           <Icon name="bell" size={20} />
         </button>
