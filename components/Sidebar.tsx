@@ -10,21 +10,21 @@ export function Sidebar() {
 
   return (
     <aside className="w-64 shrink-0 flex flex-col" style={{ background: "var(--sidebar)" }}>
-      <div className="h-16 flex items-center gap-3 px-6 border-b" style={{ borderColor: "var(--card-border)" }}>
+      <div className="h-16 flex items-center gap-3 px-6 border-b" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
         <div
           className="h-8 w-8 rounded-md grid place-items-center font-bold text-white text-sm"
           style={{ background: "var(--bina-blue)" }}
         >
           B
         </div>
-        <span className="font-semibold tracking-tight">Bina Software</span>
+        <span className="font-semibold tracking-tight" style={{ color: "rgba(255,255,255,0.92)" }}>Bina Software</span>
       </div>
 
       <nav className="flex-1 overflow-y-auto py-4 px-3">
         {NAV.map((group, gi) => (
           <div key={gi} className="mb-5">
             {group.heading && (
-              <p className="px-3 mb-2 text-[11px] font-semibold uppercase tracking-wider" style={{ color: "var(--text-dim)" }}>
+              <p className="px-3 mb-2 text-[11px] font-semibold uppercase tracking-wider" style={{ color: "rgba(255,255,255,0.35)" }}>
                 {group.heading}
               </p>
             )}
@@ -39,7 +39,7 @@ export function Sidebar() {
                       style={
                         active
                           ? { background: "var(--bina-blue)", color: "#fff" }
-                          : { color: "var(--text-dim)" }
+                          : { color: "rgba(255,255,255,0.58)" }
                       }
                     >
                       <Icon name={item.icon} size={17} />
